@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title>
+    <script>
+        /* *배열
+        =>하나의 변수 안에 여러값을 저장할 때 사용
+        =>배열을 사용할 땐 []대괄호를 이용함
+        =>배열안에 값들을 넣을 수 있는데 이 값들의 이름은
+        요소(elemnet)라고 함
+        =>각 요소들은 순서가 있는데 이는 index순서라고 하며,
+        순서는 0부터 시작함 */
+
+        // var arr = [1, 10, "문자"];
+
+        // document.write (arr);
+
+        /* document.write ((arr[0] + 10) + "<br>");
+        document.write (arr[1] + "<br>");
+        document.write (arr[2] + "<br>"); */
+
+        // var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        /* document.write (arr[0] + "<br>");
+        document.write (arr[1] + "<br>");
+        document.write (arr[2] + "<br>");
+        document.write (arr[3] + "<br>");
+        document.write (arr[4] + "<br>");
+        document.write (arr[5] + "<br>");
+        document.write (arr[6] + "<br>");
+        document.write (arr[7] + "<br>");
+        document.write (arr[8] + "<br>");
+        document.write (arr[9] + "<br>"); */
+
+        /* for (var i = 0; i < 10; i++) {
+            document.write (arr[i] + "<br>");
+        } */
+
+        var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        // document.write (arr.length);
+        // =>배열의 길이(갯수)를 알아옴
+
+        /* for (var i = 0; i < arr.length; i++) {
+            document.write (arr[i] + "<br>");
+        } */
+
+        /* for (var i = 9; i >= 0; i--) {
+            document.write (arr[i] + "<br>");
+        } */
+
+        for (var i = arr.length-1; i >= 0; i--) {
+            document.write (arr[i] + "<br>");
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

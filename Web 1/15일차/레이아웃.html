@@ -1,0 +1,149 @@
+<!-- <!DOCTYPE html> -->
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+            color: #000;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            display: block;
+            border: 0;
+        }
+
+        .wrap {
+            width: 100%;
+        }
+
+        header {
+            width: 100%;
+            height: 80px;
+            background-color: lightgray;
+            padding: 25px 100px;
+            box-sizing: border-box;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100%;
+            background-color: aqua;
+            float: left;
+        }
+
+        .gnb {
+            width: 750px;
+            float: right;
+        }
+
+        li {
+            width: 150px;
+            float: left;
+        }
+
+        .section_1 {
+            width: 100%;
+            height: 800px;
+            background-image: url(img/section_img.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            box-sizing: border-box;
+            margin: 0 auto;
+            
+        }
+
+        .main_con {
+            height: 400px;
+            text-align: center;
+            line-height: 400px;
+        }
+
+        
+        
+
+        footer {
+            width: 100%;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            background-color: #000;
+            color: #fff;
+        }
+    
+
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+        <header>
+            <div class="logo">
+                <a href="#">로고</a>
+            </div>
+            <ul class="gnb">
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+            </ul>
+        </header>
+        <!-- header end -->
+        <section class="section_1">
+            <div class="main_con">
+                <h1>삼성전자</h1>
+                <h4>천국간다</h4>
+            </div>
+        </section>
+        <!-- main_section end -->
+        <section class="section_2">
+            <h2>Title</h2>
+            <div class="con">
+                <div class="img_con">
+                    <img src="img/section_2_.png" alt="">
+                </div>
+                <div class="text_con">
+                    <h3>컨텐츠</h3>
+                    <p>컨텐츠 내용입니다.</p>
+                </div>
+                <div class="img_con">
+                    <img src="img/section_2_.png" alt="">
+                </div>
+                <div class="text_con">
+                    <h3>컨텐츠</h3>
+                    <p>컨텐츠 내용입니다.</p>
+                </div>
+                <div class="img_con">
+                    <img src="img/section_2_.png" alt="">
+                </div>
+                <div class="text_con">
+                    <h3>컨텐츠</h3>
+                    <p>컨텐츠 내용입니다.</p>
+                </div>
+            </div>
+        </section>
+        <!-- section end -->
+        <footer>
+            <h5>copyright 영역입니다</h5>
+        </footer>
+        <!-- footer end -->
+    </div>
+    
+</body>
+</html>

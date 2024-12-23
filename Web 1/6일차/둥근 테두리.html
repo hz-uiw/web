@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>둥근 테두리</title>
+    <style>
+
+        .box_1{
+            width: 300px;
+            height: 300px;
+            background-color: aqua;
+
+           /*  border-width: 10px;
+            border-style: solid;
+            border-color: black; */
+
+            /* border: 두께 스타일 색상; */
+            /* border: 10px solid black; */
+            border-right: 5px solid green;
+        }
+
+        /* *border-radius
+        =>테두리를 둥글게 처리 */
+
+        .box_2{
+            width: 600px;
+            height: 250px;
+            background-color: bisque;
+            
+            /* border-top-right-radius: 40px;
+            border-bottom-right-radius: 80px;
+            border-bottom-left-radius: 150px;
+            border-top-left-radius: 20px */;
+            /* =>각 모서리 부분에 둥글기값을 따로 추가해줌 */
+
+            /* border-radius순서 1.좌상 2.우상 3.우하 4.좌하 (좌상부터 시계방향) */
+            /* border-radius: 20px 40px 80px 150px; */
+            /* border-radius: 0 50px; */
+            /* =>좌상,우하/우상,좌하 (두 개의 모서리가 각각 같은 수치일 때) */
+            border-radius: 125px;
+        }
+
+        .box_3{
+            width: 400px;
+            height: 400px;
+            background-color: brown;
+            border: 4px solid black;
+
+            border-radius: 50%;
+           /*  =>px단위로 넣을 땐 요소값의 절반값만큼 넣어주면됨
+            =>요소가 유동적으로 변해버리면 정원이 되지 않음
+            =>요소의 크기가 어떻게 되든 50%를 넣게 되면
+            요소크기의 무조건 절반값인 50%가 들어가짐 */
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="box_1"></div>
+    <div class="box_2"></div>
+    <div class="box_3"></div>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제3 풀이</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .box {
+            width: 500px;
+            height: 600px;
+            border: 10px solid gray;
+            margin: 0 auto;
+        }
+
+        header {
+            width: 100%;
+            height: 80px;
+            background-color: sandybrown;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 40px;
+            background-color: crimson;
+        }
+
+        .btn {
+            width: 40px;
+            height: 40px;
+            background-color: rgb(255, 211, 218);
+            cursor: pointer;
+        }
+        
+        .gnb {
+            position: absolute;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            height: 0px;
+            overflow: hidden;
+            background-color: silver;
+            display: flex;
+        }
+
+        .gnb>ul {
+            width: 25%;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var i = 0;
+
+            $(".btn").click(function(){
+                if( i==0 ) {
+                    $(".gnb").animate({
+                        height: 120,
+                    });
+                    i++;
+                }else if ( i==1 ) {
+                    $(".gnb").animate({
+                        height: 0,
+                    });
+                    i=0;
+                };
+            });
+        }); //end
+    </script>
+</head>
+<body>
+    <div class="box">
+        <header>
+            <div class="logo">logo</div>
+            <div class="btn">=</div>
+            <div class="gnb">
+                <ul>
+                    <li>menu</li>
+                    <li>menu</li>
+                    <li>menu</li>
+                </ul>
+                <ul>
+                    <li>menu</li>
+                    <li>menu</li>
+                    <li>menu</li>
+                </ul>
+                <ul>
+                    <li>menu</li>
+                    <li>menu</li>
+                    <li>menu</li>
+                </ul>
+                <ul>
+                    <li>menu</li>
+                    <li>menu</li>
+                    <li>menu</li>
+                </ul>
+            </div>
+        </header>
+    </div>
+</body>
+</html>

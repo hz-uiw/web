@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11일차 문제</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        img {
+            display: block;
+            border: 0;
+        }
+
+        .out_box {
+            width: 300px;
+            height: 300px;
+            border: 1px solid gray;
+            overflow: hidden;
+
+        }
+
+        .out_box>img {
+            width: 100%;
+            height: 70%;
+        }
+
+        .out_box:hover>img {
+            width: 103%;
+            height: 73%;
+            text-decoration: underline;
+        }
+        
+        .out_box:hover>h3, .out_box:hover>p {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="out_box">
+        <img src="img/b.jpg">
+            <h3>산이란 무엇인가 <br>
+            산은 산이다.</h3>
+            <p>나무와 돌이 있다.</p>
+        </img>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이트</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /* *애니메이트
+            =>시간에 따른 움직임 또는 애니메이션 작업시 사용 */
+
+            /* *애니메이트 속성
+            1.크기값 : width, height
+            2.여백값 : margin, padding
+            3.위치값 : position의 top, left, right, bottom
+            4.투명도 : opacity
+            5.스크롤 */
+
+            /* $("선택자").animate({
+                속성 : 속성값,
+                ~~~~
+            }, 시간, 콜백함수); */
+
+            $(".box").css({
+                width: 300,
+                height: 300,
+                backgroundColor: "tan",
+                position: "relative",
+            });
+
+            $(".box").animate({
+                width: 400,
+                height: 400,
+            }, 2000, function(){
+                $(".box").animate({
+                    marginLeft: 300,
+                    padding: 100,
+                }, 3000, function(){
+                    $(".box").animate({
+                        top: 200,
+                        opacity: 0.5,
+                    }, 1000, function(){
+                        $(".box").animate({
+                            width: 300,
+                            height: 300,
+                            marginLeft: 0,
+                            padding: 0,
+                            top: 0,
+                            opacity: 1,
+                        }, 500);
+                    });
+                });
+            });
+        }); //end
+    </script>
+</head>
+<body>
+
+    <div class="box"></div>
+    
+</body>
+</html>

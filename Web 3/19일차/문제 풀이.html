@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제 풀이</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrap {
+            width: 100%;
+        }
+
+        header {
+            width: 100%;
+            height: 80px;
+            background-color: antiquewhite;
+            padding: 20px 100px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 99;
+        }
+
+        .logo {
+            width: 150px;
+            height: 100%;
+            background-color: crimson;
+        }
+
+        nav {
+            width: 600px;
+            height: 100%;
+            background-color: pink;
+        }
+
+        .section_1 {
+            width: 100%;
+            height: 90vh;
+            background-color: thistle;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section_1>h2 {
+            font-size: 70px;
+            margin-top: 150px;
+            opacity: 0;
+            animation: title_move 0.6s forwards;
+        }
+
+        @keyframes title_move {
+            to {
+                margin-top: 0;
+                opacity: 1;
+            }
+        }
+        /* section_1 end */
+
+        .section_2 {
+            width: 100%;
+            padding: 150px 0;
+            background-color: lightcyan;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section_2>h3 {
+            font-size: 40px;
+            margin-bottom: 10px;
+            position: relative;
+            top: 80px;
+            opacity: 0;
+        }
+
+        .section_2>p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            position: relative;
+            top: 100px;
+            opacity: 0;
+        }
+
+        .con_wrap {
+            width: 1400px;
+            height: 400px;
+            background-color: lightgray;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .con {
+            width: 32%;
+            height: 100%;
+            background-color: sandybrown;
+        }
+
+        /* section_2 end */
+
+        footer {
+            width: 100%;
+            height: 150px;
+            background-color: plum;
+        }
+
+        /* footer end */
+
+        .top_btn {
+            width: 80px;
+            height: 80px;
+            background-color: slateblue;
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border-radius: 80px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                var sct = $(window).scrollTop();
+                console.log(sct);
+                if(sct > 120) {
+                    $(".section_2>h3").animate({
+                        top: 0,
+                        opacity: 1,
+                    }, 600);
+                    $(".section_2>p").delay(200).animate({
+                        top: 0,
+                        opacity: 1
+                    }, 800);
+                }
+            });
+
+            $(".top_btn").click(function(){
+                $("html, body").animate({
+                    scrollTop: 0,
+                }, 300);
+            });
+        }); //end
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="logo"></div>
+            <nav></nav>
+        </header>
+        <!-- header end -->
+        
+        <section class="section_1">
+            <h2>Title</h2>
+        </section>
+        <!-- section_1 end -->
+        
+        <section class="section_2">
+            <h3>Title</h3>
+            <p>문단 영역</p>
+            <div class="con_wrap">
+                <div class="con"></div>
+                <div class="con"></div>
+                <div class="con"></div>
+            </div>
+        </section>
+        <!-- seciton_2 end -->
+        
+        <footer></footer>
+        <!-- footer end -->
+
+        <div class="top_btn">top</div>
+    </div>
+</body>
+</html>

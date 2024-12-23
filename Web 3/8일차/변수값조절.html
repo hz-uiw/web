@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수값조절</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".box").css({
+                width: 300,
+                height: 300,
+                backgroundColor: "coral",
+            });
+
+            $(".box").click(function(){
+                $(".box").css({
+                    backgroundColor: "teal",
+                });
+            });
+            
+            var i = 0;
+
+            $(".box").click(function(){
+                if(i == 0) {
+                    $(".box").css({
+                        backgroundColor: "lightblue"
+                    });
+                    i++;
+                }else if (i == 1) {
+                    $(".box").css({
+                        backgroundColor : "gold",
+                    });
+                    i++;
+                }else if (i ==2) {
+                    $(".box").css({
+                        backgroundColor: "coral",
+                    });
+                    i=0;
+                }
+                console.log(i);
+            });
+        }); //end
+    </script>
+</head>
+<body>
+
+    <div class="box"></div>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9일차 과제 풀이</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .box {
+            width: 1000px;
+            height: 200px;
+            background-color: lightblue;
+            margin: 100px auto;
+            /* float: left; 
+            =>절대로 float과margin auto은 같이 사용할 수 없음 (auto가 적용되지 않음)*/
+        }
+
+        .box>li {
+            width: 200px;
+            height: 200px;
+            border: 2px solid chocolate;
+            box-sizing: border-box;
+            float: left;
+            text-align: center;
+            line-height: 200px;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="box">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</body>
+</html>

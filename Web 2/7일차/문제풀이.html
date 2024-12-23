@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제풀이</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            box-sizing: border-box;
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .wrap {
+            width: 100%;
+        }
+
+        header {
+            width: 100%;
+            height: 180px;
+            /* background-color: lightblue; */
+            padding: 30px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 99;
+        }
+
+        .in_header {
+            width: 1500px;
+            height: 100%;
+            background-color: lightgray;
+            margin: 0 auto;
+        }
+
+        .top_header {
+            width: 100%;
+            height: 60px;
+            background-color: salmon;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 200px;
+            height: 100%;
+            background-color: crimson;
+        }
+
+        .side_menu {
+            width: 500px;
+            height: 100%;
+            background-color: antiquewhite;
+        }
+
+        .bottom_header {
+            width: 100%;
+            height: 55px;
+            background-color: lavender;
+            display: flex;
+            justify-content: space-between;
+            line-height: 55px;
+        }
+
+        .gnb {
+            width: 1300px;
+            height: 100%;
+            background-color: rgb(34, 34, 34);
+            display: flex;
+            justify-content: space-between;
+            font-weight: 900;
+            font-size: 18px;
+            letter-spacing: 3px;
+        }
+
+        .reser_btn {
+            width: 140px;
+            height: 100%;
+            background-color: rgb(128, 195, 255);
+        }
+        
+        section {
+            width: 100%;
+            height: 770px;
+            background-color: sandybrown;
+        }
+
+        section>video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="in_header">
+                <div class="top_header">
+                    <div class="logo"></div>
+                    <div class="side_menu"></div>
+                </div>
+                <div class="bottom_header">
+                    <ul class="gnb">
+                        <li><a href="#">메뉴1</a></li>
+                        <li><a href="#">메뉴2</a></li>
+                        <li><a href="#">메뉴3</a></li>
+                        <li><a href="#">메뉴4</a></li>
+                        <li><a href="#">메뉴5</a></li>
+                        <li><a href="#">메뉴6</a></li>
+                        <li><a href="#">메뉴7</a></li>
+                        <li><a href="#">메뉴8</a></li>
+                        <li><a href="#">메뉴9</a></li>
+                    </ul>
+                    <div class="reser_btn">예약하기</div>
+                </div>
+            </div>
+        </header>
+        <!-- header end -->
+
+        <section>
+            <video src="video/INSPIRE_CM_Short.mp4" autoplay muted loop></video>
+        </section>
+        <!-- section end -->
+    </div>
+</body>
+</html>

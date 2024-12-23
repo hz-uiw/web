@@ -1,0 +1,15 @@
+body {
+    color: #565656;
+}
+
+.wrap {
+    width: 100%;
+}
+
+header, section, footer {
+    width: 100%;
+}
+
+header, footer {
+    padding: 0 56px;
+}

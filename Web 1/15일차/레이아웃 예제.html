@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 예제</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #222;
+            display: block;
+        }
+
+        img {
+            display: block;
+            border: 0;
+        }
+
+        .wrap {
+            width: 100%;
+        }
+
+        header {
+            width: 100%;
+            height: 80px;
+            padding: 20px 200px;
+            background-color: lightcyan;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        .logo {
+            width: 200px;
+            height: 100%;
+            background-color: crimson;
+            float: left;
+        }
+
+        .gnb {
+            width: 800px;
+            height: 100%;
+            background-color: palegoldenrod;
+            float: right;
+        }
+
+        .gnb>li {
+            width: 18%;
+            height: 100%;
+            background-color: lightpink;
+            float: left;
+            margin-right: 2.5%;
+        }
+
+        .gnb>li:last-child {
+            margin-right: 0;
+        }
+
+        /* header end */
+
+        .section_1 {
+            width: 100%;
+            height: 800px;
+            background-image: url(img/section_img.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            padding-top: 300px;
+        }
+
+        .sec_1_title {
+            background-color: lavender;
+            margin-left: 200px;
+            color: #222;
+        }
+
+        .sec_1_title>h2 {
+            font-size: 54px;
+            margin-bottom: 10px;
+        }
+
+        .sec_1_title>p {
+            font-size: 20px;
+            line-height: 34px;
+        }
+
+        /* .section_1 end */
+
+        .section_2 {
+            padding: 120px 0;
+            background-color: antiquewhite;
+        }
+
+        .container {
+            width: 1500px;
+            background-color: lightgray;
+            margin: 0 auto;
+        }
+
+        .container>h3 {
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 50px;
+        }
+
+        .con_wrap {
+            width: 100%;
+            height: 565px;
+            background-color: sandybrown;
+        }
+
+        .con_wrap>li {
+            width: 31%;
+            background-color: aliceblue;
+            float: left;
+            margin-right: 3.5%;
+        }
+
+        .con_wrap>li:last-child {
+            margin-right: 0;
+        }
+
+        .sec_2_img {
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        .sec_2_img:hover>img {
+            width: 105%;
+            height: 105%;
+        }
+
+        .sec_2>img> {
+            width: 100%;
+            height: 100%;
+        }
+
+        .sec_2_text>h4 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        /* .section_2 end */
+
+        footer {
+            width: 100%;
+            height: 150px;
+            background-color: #1d1d1d;
+            text-align: center;
+            line-height: 150px;
+        }
+
+        /* footer end */
+        
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+        <header>
+            <div class="logo">
+                <a href="#">로고</a>
+            </div>
+            <ul class="gnb">
+                <li><a href="#">메뉴 1</a></li>
+                <li><a href="#">메뉴 2</a></li>
+                <li><a href="#">메뉴 3</a></li>
+                <li><a href="#">메뉴 4</a></li>
+                <li><a href="#">메뉴 5</a></li>
+            </ul>
+        </header>
+        <!-- header end -->
+
+        <section class="section_1">
+            <div class="sec_1_title">
+                <h2>삼성전자</h2>
+                <p>천국간다</p>
+            </div>
+        </section>
+        <!-- section_1 end -->
+
+        <section class="section_2">
+            <div class="container">
+                <h3>Title</h3>
+                <ul class="con_wrap">
+                    <li>
+                        <div class="sec_2_img">
+                            <img src="img/section_2_.png" alt="">
+                        </div>
+                        <div class="sec_2_text">
+                            <h4>컨텐츠</h4>
+                            <p>컨텐츠 내용입니다</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sec_2_img">
+                            <img src="img/section_2_.png" alt="">
+                        </div>
+                        <div class="sec_2_text">
+                            <h4>컨텐츠</h4>
+                            <p>컨텐츠 내용입니다</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sec_2_img">
+                            <img src="img/section_2_.png" alt="">
+                        </div>
+                        <div class="sec_2_text">
+                            <h4>컨텐츠</h4>
+                            <p>컨텐츠 내용입니다</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- section_2 end -->
+
+        <footer>
+            <p class="copyright">copyright 영역</p>
+        </footer>
+        <!-- footer end -->
+    </div>
+</body>
+</html>

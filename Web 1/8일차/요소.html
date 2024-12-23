@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소</title>
+    <style>
+
+        img{
+            display: block;
+            border: 0;
+        }
+
+
+
+
+   /*  *요소(elemnet)
+    =>html태그를 '요소'라고 함
+
+    1.block 요소
+    =>지정한 크기값이 적용됨
+    =>기본적으로 가로를 가득 채우는 기본 여백값이 존재함
+    =>글자 관련 태그를 제외한 태그들이 블럭요소
+    ex) div, h1~h6, p
+
+    2.inline 요소
+    =>지정한 크기밧이 적용되지 않음
+    =>기본 여백값이 없으므로 가로로 정렬됨
+    =>글자 관련 태그들이 인라인 요소
+    ex) a, b, i, small, big 등등 */
+
+    .box{
+        width: 300px;
+        height: 300px;
+    }
+
+    .box_1{
+        background-color: tan;
+        /* display: inline; */
+    }
+    
+    .box_2{
+        background-color: aqua;
+        font-size: 30px;
+        display: block;
+        /* =>a태그는 block요소로 변경 후 크기를 지정하면
+        지정한 만큼 링크 영역이 확장됨 */
+    }
+
+    img{
+        width: 300px;
+        height: 300px;
+    }
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="box box_1">블럭 요소</div>
+    <div class="box box_1">
+        <a href="#">블럭 요소</a>
+    </div>
+
+    <a href="#" class="box box_2">인라인 요소</a>
+   <!--  =>클래스명은 띄어쓰기로 새로운 클래스명을 추가할 수 있음
+    class="클래스명1 클래스명2 클래스명3" -->
+
+    <img src="img/a.jpg" alt="">
+    <img src="img/b.png" alt="">
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addClass</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            width: 400px;
+            height: 400px;
+        }
+
+        .remove{
+            border: 10px solid palevioletred;
+        }
+
+        .active{
+            background-color: lightgoldenrodyellow;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /* *addClass
+            =>선택자에 클래스를 추가할 때 사용
+            =>클래스 선택자 .은 사용하지 않음
+            =>우선 순위를 확인해야됨 */
+
+            $(".box").addClass("active");
+            
+            $(".box").removeClass("remove");
+
+        }); //end
+    </script>
+</head>
+<body>
+    <div class="box remove"></div>
+</body>
+</html>

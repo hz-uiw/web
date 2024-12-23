@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 스타일</title>
+    <style>
+
+        .box{
+            width: 400px;
+            height: 300px;
+            border: 10px solid hotpink;
+
+            font-size: 50px;
+            /* =>글자 크기 조절 */
+
+            text-align: center;
+           /*  =>글자를 가로 정렬
+            왼쪽, 가운데, 오른쪽 정렬을 할 수 있음 */
+
+            line-height: 300px;
+            /* =>글자 세로 가운데 정렬
+            =>박스의 높이값을 지정해줘야 위아래가운데 정렬이됨
+            =>복래 속성은 행간 조절임 */
+
+            font-weight: 600;
+            /* =>글자 두께 조절
+            100 200 300     400 500   600 700 800 900
+               (가늘게)    <= 기준 =>      (굵게) */
+
+            font-family: "궁서체";
+            /* =>글자체 변경
+            =>컴퓨터에 설치된 폰트만 사용가능 */
+
+            font-style: italic;
+            /* =>글자 기울기 처리 */
+
+            /* color: #03c75a */
+            /* =>16진수 표현 가능 */
+            color: rgba(0, 0, 0, 1);
+            /* =>rgb표현으로 글자 색상 변경 가능
+            =>a를 추가하면 투명도 조절 가능 단위는 0~1까지 */
+
+            text-decoration: underline;
+            /* =>글자 아랫선 */
+            /* text-decoration: overline; */
+            /* =>글자 윗선 */
+            /* text-decoration: line-through; */
+            /* =>글자 취소선 */
+        }
+    
+
+    </style>
+</head>
+<body>
+
+    <div class="box">박스</div>
+
+</body>
+</html>

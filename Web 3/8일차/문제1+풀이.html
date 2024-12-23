@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제1+풀이</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /* *문제
+            박스를 클릭하면 1초동안 가로세로 크기 커지고 난 뒤
+            이동후 배경색상 변경 */
+            
+            /* $(".box").css({
+                width: 300,
+                height: 300,
+                backgroundColor: "forestgreen",
+                position: "absolute",
+                top: 0,
+                left: 0,
+            });
+
+            $(".box").click(function(){
+                $(".box").animate({
+                    width: 400,
+                    height: 400,
+                }, 1000, function(){
+                    $(".box").animate({
+                        top: 400,
+                        left: 400,
+                    }, 2000, function(){
+                        $(".box").css({
+                            backgroundColor: "pink",
+                            transitionDuration: "1s",
+                        });
+                    });
+                });
+            }); */
+
+
+
+
+
+            //풀이
+            $(".box").css({
+                width: 200,
+                height: 200,
+                backgroundColor: "pink"
+            });
+
+            $(".box").click(function(){
+                $(".box").animate({
+                    width: 300,
+                    height: 300,
+                }, 1000, function(){
+                    $(".box").animate({
+                        margin: "200px 0 0 200px",
+                    }, 1500, function(){
+                        $(".box").css({
+                            backgroundColor: "salmon",
+                            transitionDuration: "0.5s"
+                        });
+                    });
+                });
+            });
+            
+        }); //end
+    </script>
+</head>
+<body>
+
+    <div class="box"></div>
+    
+</body>
+</html>

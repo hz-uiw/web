@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                var sct = $(window).scrollTop();
+                console.log(sct);
+
+                if(sct>=920) {
+                    $("con_wrap").animate({
+                        marginBottom: 0,
+                    });
+                }
+            });
+        }); //end
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="header_wrap">
+                <div class="logo"></div>
+                <nav></nav>
+            </div>
+        </header>
+        <!-- header end -->
+        <section class="section_1">
+            <h2>ㅎㅇ</h2>
+        </section>
+        <!-- section_1 end -->
+        <section class="section_2">
+            <div class="sec_2_wrap">
+                <div class="text_wrap">
+                    <h2>title</h2>
+                    <p>문단영역</p>
+                </div>
+                <div class="con_wrap">
+                    <img src="img/a.avif" alt="">
+                    <img src="img/b.avif" alt="">
+                    <img src="img/c.avif" alt="">
+                </div>
+            </div>
+        </section>
+        <!-- section_2 end -->
+        <footer></footer>
+        <!-- footer end -->
+    </div>
+</body>
+</html>

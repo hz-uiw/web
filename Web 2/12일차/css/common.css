@@ -1,0 +1,21 @@
+header, section, footer {
+    width: 100%;
+}
+
+.in_header, .container {
+    max-width: 1500px;
+    width: 90%;
+    height: 100%;
+    background-color: lightgray;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* 1500px */
+@media screen and (max-width:1500px) {
+    /* .in_header, .container {
+        width: 80%;
+    } */
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타이밍함수</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /* *타이밍함수
+            1.setTimeout(실행함수, 시간)
+            =>일정시간 이후에 한 번만 실행
+
+            2.setInterval(실행함수, 시간)
+            =>지정한 시간마다 계속 실행 */
+
+            /* setTimeout(function(){
+                document.write("2초 뒤에 실행")
+            }, 2000); */
+
+            /* setInterval(function(){
+                document.write("1초마다 실행");
+            }, 1000); */
+
+            $(".box").css({
+                width: 300,
+                height: 300,
+                backgroundColor: "salmon",
+            });
+
+            var i = 0;
+            
+            /* $(".box").click(function(){
+                if (i==0){
+                    $(".box").css ({
+                        backgroundColor: "lightblue",
+                    });
+                    i++;
+                }else if (i==1){
+                    $(".box").css ({
+                        backgroundColor: "salmon",
+                    });
+                    i=0;
+                };
+            });
+
+            setInterval(function(){
+                $(".box").trigger("click");
+                // =>이벤트를 강제로 실행 시켜주는 명령어
+            }, 1000); */
+
+            setInterval(function(){
+                if (i==0){
+                    $(".box").css ({
+                        backgroundColor: "lightblue",
+                    });
+                    i++;
+                }else if (i==1){
+                    $(".box").css ({
+                        backgroundColor: "salmon",
+                    });
+                    i=0;
+                };
+            }, 1000);
+        }); //end
+    </script>
+</head>
+<body>
+
+    <div class="box"></div>
+    
+</body>
+</html>

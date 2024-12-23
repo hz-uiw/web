@@ -1,0 +1,244 @@
+header {
+    height: 80px;
+    background-color: antiquewhite;
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gnb {
+    width: 780px;
+    height: 100%;
+    background-color: sandybrown;
+    font-size: 20px;
+    line-height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login {
+    margin-left: 95px;
+}
+
+.login>a:nth-child(2) {
+    display: none;
+}
+
+/* header end */
+
+.section_1 {
+    height: 100vh;
+}
+
+.section_1>video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sec_1_text {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.sec_1_text>h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.sec_1_text>p {
+    font-size: 20px;
+}
+
+/* section_1 end */
+
+.section_2 {
+    background-color: rgb(253, 248, 245);
+}
+
+.section_2 .con {
+    width: 31.5%;
+}
+
+.section_2 .con>p {
+   text-align: center;
+    font-size: 18px;
+    margin-top: 1.1vw;
+}
+
+.section_2 .sub_title {
+    display: none;
+}
+
+/* section_2 end */
+
+.section_3 {
+    display: flex;
+}
+
+.sec_3_left {
+    width: 50%;
+    padding: 8.85vw 9.5% 7.3vw 9.5%;
+}
+
+.section_3 .sec_title {
+    margin-bottom: 3.8vw;
+}
+
+.sec_3_con {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sec_3_img {
+    border-radius: 1.04vw;
+    overflow: hidden;
+}
+
+.sec_3_con p {
+    display: block;
+    font-weight: 900;
+}
+
+.sec_3_con p:first-of-type {
+    margin-top: 1vw;
+    margin-bottom: 0.5vw;
+}
+.sec_3_right {
+    width: 50%;
+    background-image: url(../img/roundhill_right_02_abzimK1.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+
+/* 1200 media */
+@media screen and (max-width: 1200px) {
+    .section_2 .con>p {
+        font-size: 16px;
+        margin-top: 1.5vw;
+    }
+
+    .section_2 .con>.sub_title {
+        display: block;
+        font-size: 12px;
+        margin-top: 1vw;
+    }
+    
+    /* section_2 end */
+
+    .sec_3_left {
+        padding: 8.85vw 7.2% 6.5vw 7.2%;
+    }
+}
+/* 1200 media end */
+
+/* 1179 media */
+@media screen and (max-width: 1179px) {
+    header {
+        height: 8.5vw;
+    }
+
+    .logo {
+        width: 12%;
+    }
+
+    .gnb {
+        display: none;
+    }
+
+    .login {
+        display: flex;
+        justify-content: space-between;
+        width: 10%;
+        background-color: salmon;
+    }
+
+    .login>a:nth-child(1) {
+        width: 35%;
+    }
+
+    .login>a:nth-child(2) {
+        display: block;
+        width: 41%;
+        background-color: forestgreen;
+    }
+}
+
+/* 767 media */
+@media screen and (max-width: 767px) {
+    header {
+        height: 14.5vw;
+    }
+
+    .logo {
+        width: 23%;
+    }
+    
+    .login {
+        width: 19%;
+    }
+
+    /* header end */
+
+    .sec_1_text {
+        width: 80%;
+    }
+
+    .sec_1_text>h2 {
+        font-size: 32px;
+        line-height: 37px;
+    }
+
+    .sec_1_text>p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    /* .section_1 end */
+
+    .section_2 .con {
+        width: 100%;
+        margin-bottom: 12vw;
+    }
+
+    .section_2 .con>p {
+        margin-top: 3.5vw;
+        font-size: 18px;
+    }
+
+    .section_2 .con>.sub_title {
+        margin-top: 2vw;
+        font-size: 15px;
+    }
+
+    /* section_2 end */
+
+    .sec_3_left {
+        width: 100%;
+        padding: 20.5vw 8% 15.5vw 8%;
+    }
+
+    .section_3 .sec_title {
+        margin-bottom: 9vw;
+    }
+
+    .sec_3_right {
+        width: 0%;
+    }
+}
+/* 767 media end */

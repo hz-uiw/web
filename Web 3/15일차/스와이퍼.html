@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스와이퍼</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            display: block;
+            border: 0;
+        }
+
+    </style>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+
+        .swiper {
+            width: 50%;
+            height: 300px;
+            border: 10px solid gray;
+        }
+
+        .swiper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: crimson;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            /* 1.플러그인
+            =>다른 사람이 만들어둔 코드를 가지고와서
+            우리 코드에 쉽게 적용시킴
+            =>플로그인을 사용할 땐 공식사이트의 문서(doc)를 참고 후 사용,
+            무분별하게 사용하면 내 사이트(app)가 무거워지거나 충돌이 일어남
+            =>미리 적용된 클래스명은 변경 불가
+            =>지정된 코드만 사용가능 
+            
+            2.라이브러리
+            =>여러 플러그인이 모인게 라이브러리 */
+
+            var swiper = new Swiper(".mySwiper", {});
+            var swiper = new Swiper(".mySwiper", {
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },pagination: {
+                    el: ".swiper-pagination",
+                    dynamicBullets: true,
+                },
+            });
+
+        }); //end
+    </script>
+</head>
+<body>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="img/c.avif" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="img/a.avif" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="img/d.webp" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="img/b.avif" alt="">
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 1500px;
+            height: 400px;
+            background-color: lightblue;
+            margin: 0 auto;
+        }
+
+        @media all and (max-width: 1500px) {
+            .box {
+                width: 1000px;
+                background-color: blueviolet;
+            }
+        }
+
+        @media all and (max-width: 1000px) {
+            .box {
+                width: 700px;
+            }
+        }
+
+        @media all and (max-width: 1000px) {
+            .box {
+                width: 80%;
+                height: 200px;
+                background-color: gold;
+            }
+        }
+
+        /* *미디어쿼리
+        =>반응형 작업하기 위해 사용되는 css기법 */
+        /* @media 기기명 and (조건) and (조건) {
+            선택자 {
+                스타일지정 (최대~최소 허용값에서 변경될 css속성들)
+            }
+        } */
+        /* *각 디바이스별 사이즈
+        1.pc (1920~1024)
+        2.테블릿 (1024~768)
+        3.모바일 (768~390) */
+
+        
+    </style>
+<script type="text/javascript" nonce="7b4163242c1a4de498e7907a315" src="//local.adguard.org?ts=1716895913940&amp;type=content-script&amp;dmn=download.mail.naver.com&amp;url=https%3A%2F%2Fdownload.mail.naver.com%2Ffile%2Fdownload%2Feach%2F%3FattachType%3Dnormal%26mailSN%3D20556%26attachIndex%3D4%26virus%3D1%26domain%3Dmail.naver.com&amp;app=whale.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script>
+<script type="text/javascript" nonce="7b4163242c1a4de498e7907a315" src="//local.adguard.org?ts=1716895913940&amp;name=AdGuard%20Extra&amp;type=user-script"></script></head>
+<body>
+    <!-- *반응형 (Respnsive)
+    =>pc, 노트북, 테블릿, 모바일 등 접속하는 기기의 크기에 따라
+    자동으로 디자인이 변경되는 기법 -->
+
+    <div class="box"></div>
+</body>
+</html>

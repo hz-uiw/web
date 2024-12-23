@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비디오태그</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* *video 태그
+        - video는 HTML 문서에 동영상을 삽입하는 태그
+        - source태그와 함께 사용 (미디어 유형을 지정해 줄 수 있음) */
+
+        /* *비디오태그 속성
+        1. src
+        - 삽입할 비디오의 주소 */
+
+        /* 2. controls
+        - 오디오 재생에 관한 조절 장치를 보여줌
+        - playback, pause, resume, volume 등 */
+
+        /* 3. autoplay
+        - 비디오가 로드되면 자동 실행
+        - IE9+, Chrome, FF, Safari, Opera 지원
+        - 2018 04월 이후 크롬 브라우저에서 소리가 나오는 동영상 자동 재생 되지않음
+        muted 처리시 자동 재생됨
+
+        4. muted
+        - 비디오의 소리 음소거 결정 */
+
+        /* 5. loop
+        - 비디오 반복 재생 */
+
+        h3 {
+            margin-top: 50px;
+        }
+
+        video {
+            width: 500px;
+            height: 500px;
+            border: 5px solid gray;
+
+            /* object-fit: fill; */
+            /* object-fit: contain; */
+            object-fit: cover;
+        }
+
+        /* *object-fit
+        =>img video, object, svg 같은 태그의 내용을 지정된 너비와 높이로 맞춰줌
+        =>background-size 속성과 매우 유사
+        =>종류
+        - fill : 이미지 비율을 무시한채로 강제로 크기를 늘려줌
+        - contain : 이미지 비율을 유지한채로 부모 크기에 맞춰줌
+        - cover : 이미지 비율을유지한채로 부모 밖으로 넘치는 영역을 잘라줌 */
+
+    </style>
+</head>
+<body>
+    <!-- <video>
+        <source src="video/INSPIRE_CM_Short.mp4" type="video/mp4">
+    </video> -->
+    
+    <video src="video/INSPIRE_CM_Short.mp4"></video>
+
+    <h3>비디오 컨트롤 장치 생성</h3>
+    <video src="video/INSPIRE_CM_Short.mp4" controls></video>
+
+    <h3>비디오 자동 재생</h3>
+    <video src="video/INSPIRE_CM_Short.mp4" autoplay muted></video>
+
+    <h3>비디오 반복 재생</h3>
+    <video src="video/INSPIRE_CM_Short.mp4" autoplay muted loop></video>
+
+    <h3>유튜브 영상 불러오기</h3>
+    <iframe width="1280" height="640" src="https://www.youtube.com/embed/d__5lW4mpII" title="0명 뽑는데 왜 모집함?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
+    <h3>구글 지도 불러오기</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4744.940690220317!2d128.67962172396324!3d35.214829795303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568cd0f99b1922f%3A0x9566141bbc68f975!2z7IOB64Ko6r-I7JeQ6re466aw!5e0!3m2!1sko!2skr!4v1716167633589!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
+</body>
+</html>

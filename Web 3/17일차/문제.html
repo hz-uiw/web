@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: darkgreen;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/jquery.transit.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var i = 0;
+            $(".box").click(function(){
+                if (i == 0) {
+                    $(this).transition({
+                        rotate: 360,
+                    }, function (){
+                        $(this).css({
+                            backgroundColor: "navy"
+                        });
+                    });
+                    i++;
+                } else if (i == 1) {
+                    $(this).transition({
+                        rotate: -360,
+                    }, function(){
+                        $(this).css({
+                            backgroundColor: "darkgreen"
+                        });
+                    });
+                    i--;
+                }
+            });
+        }); //end
+        
+    </script>
+</head>
+<body>
+    <!-- 1. 박스 하나 만들기
+    2. 박스를 클릭했을 때
+        배경색 변경, 회전시키기 +방향
+        원래색상으로 회전시키기 -방향 -->
+    <div class="box"></div>
+</body>
+</html>

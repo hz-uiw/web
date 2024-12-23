@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    border: 0;
+}
+
+.wrap {
+    width: 100%;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background-color: grey;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.header_wrap {
+    width: 80%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 150px;
+    height: 50px;
+    background-color: #fff;
+}
+
+nav {
+    width: 40%;
+    height: 50px;
+    background-color: #fff;
+}
+
+/* header end */
+
+.section_1 {
+    width: 100%;
+    height: 1000px;
+    background-color: lightgray;
+}
+
+.section_1>h2 {
+    font-size: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-name: title_ani;
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    
+}
+
+@keyframes title_ani {
+    from {
+        top: 70%;
+        opacity: 0;
+    }
+    to {
+        top: 50%;
+        opacity: 1;
+    }
+}
+
+/* .section_1 end */
+
+.section_2 {
+    width: 100%;
+    height: 800px;
+    background-color: gray;
+}
+
+
+
+.text_wrap {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.text_wrap>h2 {
+    font-size: 50px;
+    margin: 100px 0 10px 0;
+}
+
+.text_wrap>p {
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.con_wrap {
+    width: 80%;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 400px auto;
+    /* animation-name: con_animation;
+    animation-duration: 1s;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+    animation-delay: 1s; */
+}
+
+@keyframes con_animation {
+    from {
+        margin-bottom: 400px;
+    }
+    to {
+        margin-bottom: 0px;
+    }
+}
+
+.con_wrap>img {
+    width: 33%;
+}
+
+/* section_2 end */
+
+footer {
+    width: 100%;
+    height: 200px;
+    background-color: #000;
+}
+
+/* footer end */

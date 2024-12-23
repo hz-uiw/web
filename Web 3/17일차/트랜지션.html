@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트랜지션</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 500px;
+            height: 200px;
+            background-color: saddlebrown;
+            margin: 100px auto;
+        }
+
+        .box_1:hover {
+            transform: rotateY(360deg);
+            transition-duration: 1s;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/jquery.transit.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $("선택자").transition({
+            //     translate: "x, y",
+            //     scaleX: ,
+            //     scaleY: ,
+            //     rotate: ,
+            //     skew: ,
+            //     delay: ,
+            //     opacity: ,
+            //     bacgkroundColor: ,
+            // }, 시간, 콜백함수);
+
+            $(".box_2").transition({
+                translate: "50px, 50px"
+            }, 1000, function(){
+                $(this).transition({
+                    scaleX: 1.2,
+                    rotate: 30,
+                }, 500, function(){
+                    $(this).transition({
+                        skewY: 45,
+                        delay: 1000,
+                    }, 1500, function(){
+                        $(this).transition({
+                            opacity: 0.5,
+                            backgroundColor: "coral",
+                        }, 2000, function(){
+                            $(this).transition({
+                                backgroundColor: "saddlebrown",
+                                opacity: 1,
+                                skewY: 0,
+                                rotate: 0,
+                                scaleX: 1,
+                                translate: "0, 0"
+                            });
+                        });
+                    });
+                });
+            });
+        }); //end
+    </script>
+</head>
+<body>
+    <div class="box box_1"></div>
+    <div class="box box_2"></div>
+</body>
+</html>

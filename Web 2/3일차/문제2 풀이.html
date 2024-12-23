@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제2 풀이</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .btn_wrap {
+            width: 250px;
+            height: 50px;
+            border: 1px solid #dbdbdb;
+            border-radius: 10px;
+            margin: 100px auto;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .btn_wrap>div {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 50px;
+            font-weight: 900;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .btn_wrap>.btn_bg {
+            width: 0;
+            background-color: olivedrab;
+            transition-duration: 1s;
+        }
+
+        .btn_wrap:hover>.btn_bg {
+            width: 100%;
+        }
+
+        .btn_text {
+            transition-duration: 0.2s;
+            transition-delay: 0.2s;
+        }
+
+        .btn_wrap:hover>.btn_text {
+            color: #fff;
+        }
+        
+    </style>
+<script type="text/javascript" nonce="e47dcebc80814a44a3c7db8a1e4" src="//local.adguard.org?ts=1715764684584&amp;type=content-script&amp;dmn=download.mail.naver.com&amp;url=https%3A%2F%2Fdownload.mail.naver.com%2Ffile%2Fdownload%2Feach%2F%3FattachType%3Dnormal%26mailSN%3D20467%26attachIndex%3D2%26virus%3D1%26domain%3Dmail.naver.com&amp;app=whale.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script>
+<script type="text/javascript" nonce="e47dcebc80814a44a3c7db8a1e4" src="//local.adguard.org?ts=1715764684584&amp;name=AdGuard%20Extra&amp;type=user-script"></script></head>
+<body>
+
+    <div class="btn_wrap">
+        <div class="btn_bg"></div>
+        <div class="btn_text">더보기 +</div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플렉스</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .con_wrap {
+            width: 500px;
+            height: 500px;
+            border: 10px solid gray;
+
+            display: flex;
+            /* =>요소를 flex로 변경하며 반드시 부모에게 적용할 것
+            =>flex를 적용하면 자식은 왼쪽으로 정렬됨 */
+
+            flex-direction: row;
+            /* =>자식의 주축 설정 */
+            /* =>row : 자식을 왼쪽에서 오른쪽으로 표시 (기본값) */
+            /* =>row-reverse : row의 반대 */
+            /* =>column : 자식을 위에서 아래로 */
+            /* =>column-reverse : column의 반대 */
+
+            justify-content: center;
+            /* =>축에대한 수평방향 */
+            /* =>flex-start : 시작점부터 시작 */
+            /* =>flex-end : 끝에서 시작 */
+            /* =>center : 가운데 정렬 */
+            /* =>space-between : 첫 자식이 시작점, 마지막 자신이 끝점에 배치가 되고 나머지 간격정렬 */
+            /* =>space-around : 자식의 주변 간격이 동일하게 적용 */
+            /* =>space-evenly : 자식 사이의 간격이 동일하게 적용 */
+
+            align-items: center;
+            /* =>축에 대한 수직방향 */
+            /* =>flex-start : 시작점에서 시작 */
+            /* =>flex-end : 끝점에서 시작 */
+            /* ->center : 가운데 정렬 */
+
+            flex-wrap: wrap;
+            /* =>자식의 줄바꿈을 지정 */
+            /* =>nowrap(기본값) : 줄바꿈을 하지 않음 */
+            /* =>wrap : 줄바꿈 처리 */
+        }
+
+        .con {
+            width: 100px;
+            height: 100px;
+            border: 3px solid olivedrab;
+            background-color: antiquewhite;
+            font-size: 30px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+<script type="text/javascript" nonce="7b4163242c1a4de498e7907a315" src="//local.adguard.org?ts=1716118865392&amp;type=content-script&amp;dmn=download.mail.naver.com&amp;url=https%3A%2F%2Fdownload.mail.naver.com%2Ffile%2Fdownload%2Feach%2F%3FattachType%3Dnormal%26mailSN%3D20507%26attachIndex%3D4%26virus%3D1%26domain%3Dmail.naver.com&amp;app=whale.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script>
+<script type="text/javascript" nonce="7b4163242c1a4de498e7907a315" src="//local.adguard.org?ts=1716118865392&amp;name=AdGuard%20Extra&amp;type=user-script"></script></head>
+<body>
+    <div class="con_wrap">
+        <div class="con">1</div>
+        <div class="con">2</div>
+        <div class="con">3</div>
+    </div>
+</body>
+</html>

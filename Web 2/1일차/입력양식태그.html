@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력양식태그</title>
+<script type="text/javascript" nonce="e47dcebc80814a44a3c7db8a1e4" src="//local.adguard.org?ts=1715256881842&amp;type=content-script&amp;dmn=download.mail.naver.com&amp;url=https%3A%2F%2Fdownload.mail.naver.com%2Ffile%2Fdownload%2Feach%2F%3FattachType%3Dnormal%26mailSN%3D20424%26attachIndex%3D4%26virus%3D1%26domain%3Dmail.naver.com&amp;app=whale.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script>
+<script type="text/javascript" nonce="e47dcebc80814a44a3c7db8a1e4" src="//local.adguard.org?ts=1715256881842&amp;name=AdGuard%20Extra&amp;type=user-script"></script></head>
+<body>
+
+    <!-- *form 태그
+    =>입력 양식 태그
+    =>사용자로부터 입력받은 데이터를 서버로 전송시키는 역할
+    =>모든 입력 양식 태그의 부모 역할
+
+    *form 태그 속성
+    =>action : 폼 내용을 작성 후 지정한 링크로 폼 내용을 담은채로 이동
+    =>method : 정보가 넘어가는 방식 결정
+            ㄴPOST(기본값) : 정보를 넘길 떄 숨김 처리 (로그인 형식)
+            ㄴGET : 정보를 넘길 때 URL에 표시 (검색 형식) -->
+    
+
+
+    <form>
+
+        <input type="text" placeholder="아이디">
+        <!-- =>input태그는 inline-block 요소
+        =>기본적으로 유저가 값을 입력할 수 있는 ui를 표현함 -->
+        <!-- =>placeholder 속성은 input에 내용을 미리보기할 수 있음 -->
+        <br>
+
+        <input type="password" placeholder="비밀번호">
+        <!-- =>패스워드를 작성할 때 사용함
+        =>작성한 내용이 기호로 표현 -->
+        <br>
+
+        예약 날짜 : <input type="date"><br>
+        예약 시간 : <input type="time">
+        <br><br>
+
+        <input type="button" value="검색">
+        <!-- =>버튼 ui 생성, value 속성으로 버튼 내용 작성 가능 -->
+        <br>
+
+        <button>로그인</button>
+        <!-- =>시멘틱 태그 버튼으로 input button ui와 동일함
+        =>form태그 안에 작성하게 되면 form의 기능을 실행함 -->
+        <br>
+
+        <input type="submit" value="로그인">
+        <!-- =>button 시멘틱태그와 동일한 기능 실행
+        =>form의 데이터를 전송하는 기능 -->
+        <br><br>
+
+        <input type="checkbox" id="check">
+        <!-- =>체크박스 생성 -->
+        <label for="check">동의하기</label>
+        <!-- =>체크박스와 같은 그룹으로 만들 때 사용
+        =>반드시 같은 그룹으로 묶일 인풋태그는 id선택자로 지정할 것
+        =>for 속성을 이용하여 id선택자 명을 넣어주면 됨 -->
+        <br><br>
+
+        <input type="radio" id="tab_1" name="tab_groub">
+        <label for="tab_1">남자</label>
+        <br>
+        <input type="radio" id="tab_2" name="tab_groub">
+        <label for="tab_2">여자</label>
+        <!-- =>radio 속성값은 단일 선택일 때 사용함
+        =>name 속성값을 사용하여 같은 그룹의 인풋끼리 묶어줘야 됨 -->
+        <br><br>
+
+        <select>
+            <option>선택</option>
+            <option>skt</option>
+            <option>kt</option>
+            <option>lg u+</option>
+        </select>
+
+    </form>
+
+</body>
+</html>

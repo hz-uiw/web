@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>each</title>
+    <style>
+        li[data-num="1"]{
+            color: lightblue;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /* *each(function(매개변수){})
+            =>반복문 역할을 함
+            =>매개변수를 반드시 지정해줘야됨
+            =>매개변수는 index number값을 얻어옴 */
+
+            $("li").each(function(i){
+                // console.log(i);
+                $(this).attr({
+                    "data-num": i,
+                    class: "box"
+                });
+            });
+        }); //end
+    </script>
+</head>
+<body>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    
+</body>
+</html>

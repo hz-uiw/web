@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크롤</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 2000px;
+        }
+
+        .box {
+            width: 100%;
+        }
+
+        .box_1 {
+            height: 100px;
+            background-color: tan;
+        
+        }
+
+        .box_2 {
+            height: 400px;
+            background-color: lightblue;
+        }
+
+        .box_3 {
+            height: 200px;
+            background-color: antiquewhite;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /* *스크롤 이벤트
+            =>스크롤로 반응하여 이벤트가 적용됨
+            =>스크롤 바 기준 */
+            $(".box_1").click(function(){
+                $("html, body").animate({
+                    scrollTop: 500,
+                });
+                /* =>스크롤바를 움직일 땐 선택자가 html, body를 사용해야되며,
+                animate 속성의 scrollTop을 사용하여
+                스크롤바를 움직일 수 있음 */
+            });
+
+            $(".box_3").click(function(){
+                $("html, body").animate({
+                    scrollTop: 0
+                }, 300);
+            });
+
+            $(window).scroll(function(){
+                var sct = $(window).scrollTop();
+
+                if(0 < sct && sct < 500) {
+                    $(".box_3").css({
+                        backgroundColor: "salmon",
+                    });
+                } else if (sct >= 500) {
+                    $(".box_3").css({
+                        backgroundColor: "lightgray"
+                    });
+                } else {
+                    $(".box_3").css({
+                        backgroundColor: "antiquewhite"
+                    });
+                }
+                /* if (sct >= 500) {
+                    $(".box_3").css({
+                        backgroundColor: "darkgreen"
+                    });
+                } */
+
+                console.log(sct);
+            });
+        }); //end
+    </script>
+</head>
+<body>
+    <div class="box box_1"></div>
+    <div class="box box_2"></div>
+    <div class="box box_3"></div>
+</body>
+</html>

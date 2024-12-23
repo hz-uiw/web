@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover</title>
+    <style>
+    
+    /* *event
+    =>유저가 마우스 또는 키보드로 특정 행동을 했을 때
+    다른 변화값을 던져주는 행위
+    =>인터렉티브 (상호작용) */
+    
+    /* *hover
+    =>엘리먼트에 마우스를 올렸을 때 변화하고 싶은
+    속성을 추가 할 수 있음 */
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    .box {
+        width: 300px;
+        height: 300px;
+        background-color: tan;
+    }
+
+    .box:hover {
+        background-color: coral;
+        width: 500px;
+    }
+
+    .out_box {
+        width: 600px;
+        height: 400px;
+        background-color: thistle;
+        /* float: left; */
+        padding: 100px 0;
+        box-sizing: border-box;
+    }
+
+    .in_box {
+        width: 200px;
+        height: 200px;
+        background-color: sandybrown;
+        /* margin: 100px auto; */
+        margin: 0 auto;
+    }
+
+    .out_box:hover>.in_box {
+        background-color: teal;
+    }
+
+    .out_box>.in_box:hover {
+        background-color: black;
+    }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+    <div class="out_box">
+        <div class="in_box"></div>
+    </div>
+    
+</body>
+</html>

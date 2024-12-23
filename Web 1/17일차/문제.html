@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+
+        img {
+            display: block;
+            border: 0;
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+            color: #222;
+        }
+
+        .wrap {
+            width: 600px;
+            height: 550px;
+            background-color: lightblue;
+            position: relative;
+        }
+
+        .img_con {
+            width: 600px;
+            height: 450px;
+            overflow: hidden;
+        }
+
+        .wrap:hover img {
+            width: 105%;
+            height: 105%;
+        }
+
+        .wrap:hover .text_con>p {
+            text-decoration: underline;
+        }
+
+        .text_con>h2 {
+            color: blue;
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .text_con>p {
+            font-size: 24px;
+            color: black;
+        }
+
+        .info {
+            width: 210px;
+            height: 30px;
+            background-color: rgba(22, 22, 22, 0.2);
+            border-radius: 30px;
+            text-align: center;
+            color: #fff;
+            font-weight: 900;
+            line-height: 30px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .live {
+            width: 80px;
+            color: #fff;
+            background-color: red;
+            border-radius: 30px;
+            text-align: center;
+            line-height: 30px;
+            font-weight: 900;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="img_con">
+            <a href="#">
+                <img src="img/a.jpg" alt="">
+            </a>
+        </div>
+        <div class="text_con">
+            <h2>겨울</h2>
+            <p>춥다</p>
+        </div>
+        <div class="info"> 999,999 시청
+            <div class="live">LIVE</div>
+        </div>
+    </div>
+    
+</body>
+</html>

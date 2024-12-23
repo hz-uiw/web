@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리스트 태그</title>
+</head>
+<body>
+    
+<!--     *순서가 없는 리스트(목록) 태그
+    <ul>
+        <li></li>
+    </ul>
+    =>ul안쪽 태그는 li만 허용됨
+    =>기본적으로 속이 채워진 원현기호 속성인 disc속성을 가지고 있음 -->
+
+
+    <h2>순서가 없는 목록태그</h2>
+
+    <ul>
+        <li type="disc">속이 채워진 원형 기호</li>
+        <li type="circle">속이 비워진 원형 기호</li>
+        <li type="square">속이 채워진 사각형 기호</li>
+        <li type="none">기호 없음</li>
+    </ul>
+
+    <ul type="circle">
+        <li>순서 없는 리스트</li>
+        <li type="square">순서 없는 리스트</li>
+        <li>순서 없는 리스트</li>
+        <li>순서 없는 리스트</li>
+        <li>순서 없는 리스트</li>
+    </ul>
+
+    <!-- *태그간 부모, 자식 관계
+    =>태그를 감싸고 있는 태그는 부모 태그 
+    =>태그 안쪽에 있는 태그는 자식 태그
+    =>각 태그의 경우에 따라 속성값을 상속할 수 있음
+    =>태그 안쪽엔 태그를 작성할 수 있음 -->
+
+
+    <h2>순서가 있는 목록 태그</h2>
+    <!-- =>순서가 있는 태그를 사용시 ol태그를 사용하며,
+    자식태그로는  li 동일하게 사용함 -->
+    <ol>
+        <li type="1">숫자로 표현</li>
+        <li type="A">대문자 A부터 순서대로 표현</li>
+        <li type="a">소문자 a부터 순서대로 표현</li>
+        <li type="I">로마 대문자로 표현</li>
+        <li type="i">로마 소문자로 표현</li>
+    </ol>
+
+
+
+
+
+</body>
+</html>

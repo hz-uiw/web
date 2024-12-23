@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리사이즈</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /* *리사이즈
+            =>$(window).resize(function(){});
+            =>브라우저 크기값이 변경될 때 사이즈를 재수정해서 로딩해줌 */
+
+            $(".box_1").css({
+                width: "50%",
+                height: 300,
+                backgroundColor: "teal",
+            });
+
+            var box1_w = $(".box_1").width();
+
+            function layout() {
+                $(".box_2").css({
+                    width: box1_w,
+                    height: 400,
+                    backgroundColor: "salmon",
+                });
+
+                $(".box_3").css({
+                    width: box1_w*0.8,
+                    height: box1_w*0.8,
+                    backgroundColor: "tan"
+                });
+            }
+            layout();
+            /* =>리사이즈 안쪽에 들어가는 재수정될 사이즈들은 반드시 리사이즈 밖에도 있어야됨
+            (첫 로딩값이기 때문) */
+
+            $(window).resize(function(){
+                box1_w = $(".box_1").width();
+                console.log(box1_w)
+
+                layout();
+            });
+
+
+        }); //end
+    </script>
+</head>
+<body>
+    <div class="box_1"></div>
+    <div class="box_2"></div>
+    <div class="box_3"></div>
+</body>
+</html>

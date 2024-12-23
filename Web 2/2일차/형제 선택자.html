@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>형제 선택자</title>
+    <style>
+        /* h2+h3 {
+            color: blue;
+        } */
+        /* =>인접 형제 선택자
+        =>기준 선택자 바로 뒤에 있는 형제 태그를 선택을 함 */
+
+        /* h2~h3 {
+            color: pink;
+        } */
+
+        h2~.three {
+            color: palegreen;
+        }
+        /* =>형제 선택자
+        =>기준 뒤에 원하는 형제 태그를 선택함 */
+
+        h2~h4>div:nth-child(2) {
+            color: sandybrown;
+        }
+    </style>
+<script type="text/javascript" nonce="e47dcebc80814a44a3c7db8a1e4" src="//local.adguard.org?ts=1715463087394&amp;type=content-script&amp;dmn=download.mail.naver.com&amp;url=https%3A%2F%2Fdownload.mail.naver.com%2Ffile%2Fdownload%2Feach%2F%3FattachType%3Dnormal%26mailSN%3D20436%26attachIndex%3D5%26virus%3D1%26domain%3Dmail.naver.com&amp;app=whale.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script>
+<script type="text/javascript" nonce="e47dcebc80814a44a3c7db8a1e4" src="//local.adguard.org?ts=1715463087394&amp;name=AdGuard%20Extra&amp;type=user-script"></script></head>
+<body>
+    <h2>기준선택자(첫번째 형제)</h2>
+    <h3>두번째 형제</h3>
+    <h3 class="three">세번째 형제</h3>
+    <h4>
+        <div>첫번째</div>
+        <div>두번째</div>
+    </h4>
+    
+</body>
+</html>

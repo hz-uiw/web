@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13일차 문제 풀이</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #222;
+            display: block;
+        }
+
+        body {
+            letter-spacing: -1px;
+            color: #222;
+        }
+
+        .section {
+            width: 100%;
+            /* padding: 130px 0; */
+            background-color: #ededed;
+        }
+
+        .container {
+            width: 1240px;
+            height: 440px;
+            /* background-color: antiquewhite; */
+            margin: 0 auto;
+            /* padding: 30px; */
+            padding: 130px 30px;
+        }
+
+        .left_con_wrap {
+            width: 40%;
+            height: 100%;
+            /* background-color: aquamarine; */
+            float: left;
+        }
+
+        .left_con_wrap>h2 {
+            font-size: 32px;
+            line-height: 48px;
+            letter-spacing: -1px;
+        }
+
+        .more_btn {
+            /* padding: 12px 28px;
+            display: inline-block; */
+
+             width: 160px;
+             padding: 12px 0;
+             text-align: center;
+
+             /* width: 160px;
+             height: 50px;
+             text-align: center;
+             line-height: 50px; */
+
+            border: 2px solid #222;
+            border-radius: 50px;
+            margin-top: 30px;
+        }
+
+        .more_btn:hover {
+            background-color: #222;
+        }
+
+        .more_btn:hover>a {
+            color: #fff;
+        }
+
+        .arrow_wrap {
+            width: 140px;
+            height: 60px;
+            /* background-color: lightblue; */
+            margin-top: 200px;
+        }
+
+        .arrow {
+            width: 60px;
+            height: 60px;
+            border: 1px solid rgba(34, 34, 34, 0.4);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 55px;
+            font-size: 24px;
+            font-weight: 900;
+        }
+
+        .left {
+            float: left;
+        }
+
+        .right {
+            float: right;
+        }
+
+        .arrow:hover {
+            background-color: #222;
+            color: #fff;
+        }
+
+        .right_con_wrap {
+            width: 60%;
+            height: 100%;
+            /* background-color: olive; */
+            float: right;
+        }
+
+        .con {
+            width: 350px;
+            height: 350px;
+            padding: 34px;
+            box-sizing: border-box;
+            border-radius: 30px;
+            background-color: #fff;
+            float: left;
+        }
+
+        .con:first-child {
+            margin-right: 25px;
+        }
+
+        .con h5 {
+            width: 82px;
+            height: 36px;
+            border: 1px solid #32a13c;
+            border-radius: 36px;
+            color: #32a13c;
+            text-align: center;
+            line-height: 36px;
+            font-size: 14px;
+        }
+
+        .con h3 {
+            font-size: 22px;
+            margin: 20px 0 25px 0;
+        }
+
+        .con p {
+            font-size: 17px;
+            color: #666;
+            line-height: 28px;
+
+        }
+
+        .date {
+            font-size: 14px;
+            color: #666;
+            margin-top: 70px;
+        }
+
+
+        
+
+    </style>
+</head>
+<body>
+    
+    <div class="section">
+
+        <div class="container">
+
+            <div class="left_con_wrap">
+                <h2>NH리츠운용의 <br>
+                    새로운 소식을 전합니다</h2>
+                    <div class="more_btn">
+                        <a href="#">자세히보기&rarr;</a>
+                    </div>
+                    <div class="arrow_wrap">
+                        <div class="arrow left">&lt;</div>
+                        <div class="arrow right">&gt;</div>
+                    </div>
+            </div>
+            <!-- left_con_wrap_end -->
+
+            <div class="right_con_wrap">
+                <div class="con">
+                    <a href="#">
+                        <h5>경영공시</h5>
+                        <h3>임원 선임 보고</h3>
+                        <p>
+                            금융회사의 지배구조에 관한 법률(이하 "지배구조법")
+                            제7조 제3항에 따라 첨부와 같이 임원 해임(사임)에
+                        </p>
+                        <div class="date">2024.04.03</div>
+                    </a>
+                </div>
+                <div class="con">
+                    <a href="#">
+                        <h5>경영공시</h5>
+                        <h3>임원 선임 보고</h3>
+                        <p>
+                            금융회사의 지배구조에 관한 법률(이하 "지배구조법")
+                            제7조제3항에 따라 첨부와 같이 임원 해임(사임)에
+                        </p>
+                        <div class="date">2024.04.03</div>
+                    </a>
+                </div>
+            </div>
+            <!-- right_con_wrap_end -->
+
+        </div>
+
+    </div>
+</body>
+</html>

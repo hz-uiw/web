@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>점 텍스트 슬라이드</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            border: 0;
+            display: block;
+        }
+
+        .wrap {
+            width: 1000px;
+            height: 500px;
+            border: 10px solid black;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .img_wrap {
+            width: 400%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+        }
+
+        .img_wrap>img {
+            width: 25%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .btn {
+            width: 150px;
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .btn>li {
+            width: 30px;
+            height: 30px;
+            background-color: lightslategrey;
+            border-radius: 50%;
+        }
+
+        .btn>.active {
+            background-color: crimson;
+        }
+
+        .text_wrap {
+            width: 220px;
+            height: 50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            overflow: hidden;
+        }
+
+        .text {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;           
+            position: absolute;
+            top: 50px;
+            left: 0;
+        }
+
+        .text>li {
+            color: #fff;
+            font-size: 50px;
+            font-weight: 900;
+            line-height: 50px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .text>.active2 {
+            top: -50px;
+            transition-duration: .3s;
+        }
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".btn>li").each(function(num){
+                $(this).attr({
+                    "data-index" : num
+                });
+            }).click(function(){
+                var i = $(this).attr("data-index");
+
+                $(".img_wrap").animate({
+                    left: -1000 * i
+                });
+
+                $(".btn>li").removeClass("active");
+                $(".btn>li").eq(i).addClass("active");
+
+                $(".text>li").removeClass("active2");
+                $(".text>li").eq(i).addClass("active2");
+            });
+        }); //end
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="img_wrap">
+            <img src="img/a.avif" alt="">
+            <img src="img/b.avif" alt="">
+            <img src="img/c.avif" alt="">
+            <img src="img/d.webp" alt="">
+        </div>
+        <ul class="btn">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="text_wrap">
+            <ul class="text">
+                <li class="active2">TITLE 01</li>
+                <li>TITLE 02</li>
+                <li>TITLE 03</li>
+                <li>TITLE 04</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

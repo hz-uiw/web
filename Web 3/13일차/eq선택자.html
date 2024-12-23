@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eq선택자</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // *eq()
+            // =>인덱스 순서에 맞게 선택자를 선택함
+            // =>순서를 변수로 사용할 수 있음
+
+            /* $("li").eq(1).css({
+                color: "lightblue",
+            }); */
+
+            /* var num = 0;
+
+            $("button").click(function(){
+                $("li").eq(num).css({
+                    color: "green",
+                });
+                num++;
+            }); */
+
+
+
+
+            $("li").each(function(num){
+                $(this).attr({
+                    "data-num": num
+                });
+            });
+
+            $("li").click(function(){
+
+                var i = $(this).attr("data-num");
+                console.log(i);
+
+                $("li").css({
+                    color: "black"
+                });
+
+                $("li").eq(i).css({
+                    color: "red"
+                });
+            });
+        }); //end
+    </script>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+
+    <!-- <button>버튼</button> -->
+</body>
+</html>

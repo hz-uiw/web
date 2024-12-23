@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: coral;
+            position: relative;
+
+            /* animation-name: box_move;
+            animation-duration: 1s;
+            animation-iteration-count: 5;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+            animation-delay: 2s; */
+
+            animation: box_move 1s 5 alternate forwards 2s;
+        }
+
+        @keyframes box_move {
+            0% {
+                top: 0;
+            }
+            100% {
+                top: 300px;
+            }
+        }
+    </style>
+<script type="text/javascript" nonce="7b4163242c1a4de498e7907a315" src="//local.adguard.org?ts=1715871179806&amp;type=content-script&amp;dmn=download.mail.naver.com&amp;url=https%3A%2F%2Fdownload.mail.naver.com%2Ffile%2Fdownload%2Feach%2F%3FattachType%3Dnormal%26mailSN%3D20487%26attachIndex%3D4%26virus%3D1%26domain%3Dmail.naver.com&amp;app=whale.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script>
+<script type="text/javascript" nonce="7b4163242c1a4de498e7907a315" src="//local.adguard.org?ts=1715871179806&amp;name=AdGuard%20Extra&amp;type=user-script"></script></head>
+<body>
+    <div class="box"></div>
+    
+</body>
+</html>

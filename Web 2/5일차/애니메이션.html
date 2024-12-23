@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: teal;
+
+            animation-name: box_ani;
+            /* =>애니메이션 이름 부여(키프레임명 적용) */
+            animation-duration: 1s;
+            /* =>애니메이션 움직임 시간 부여 */
+            animation-iteration-count: 5;
+            /* =>애니메이션 반복 횟수 (단위 없음)
+            =>infinite 값을 적용하면 무한으로 움직임 */
+            animation-direction: alternate;
+            /* =>애니메이션 방향을부여하며, 일반적으로
+            alternate 속성값을 많이 사용함
+            =>normal(기본값), alternate, reverse, alternate-reverse */
+            animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+            /* =>애니메이션 가속도 부여 */
+            animation-fill-mode: forwards;
+            /* =>애니메이션이 끝나고 난 뒤 그 위치에서 멈춰있도록 설정함 */
+            animation-delay: 2s;
+            /* =>애니메이션 지연시간 */
+        }
+
+        @keyframes box_ani {
+            form {
+                margin-left: 0;
+            }
+            to {
+                margin-left: 400px;
+            }
+        }
+
+        /* @keyframes 애니메이션이름 {
+            from (=0%) {  
+                시작위치
+            }
+            50% {
+                중간위치
+            }
+            to (=100%) {
+                끝위치
+            }
+        } */
+
+        
+    </style>
+<script type="text/javascript" nonce="7b4163242c1a4de498e7907a315" src="//local.adguard.org?ts=1715871179806&amp;type=content-script&amp;dmn=download.mail.naver.com&amp;url=https%3A%2F%2Fdownload.mail.naver.com%2Ffile%2Fdownload%2Feach%2F%3FattachType%3Dnormal%26mailSN%3D20487%26attachIndex%3D3%26virus%3D1%26domain%3Dmail.naver.com&amp;app=whale.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script>
+<script type="text/javascript" nonce="7b4163242c1a4de498e7907a315" src="//local.adguard.org?ts=1715871179806&amp;name=AdGuard%20Extra&amp;type=user-script"></script></head>
+<body>
+
+    <div class="box"></div>
+    
+</body>
+</html>

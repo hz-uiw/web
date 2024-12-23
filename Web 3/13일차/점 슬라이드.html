@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>점 슬라이드</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            border: 0;
+            display: block;
+        }
+
+        .wrap {
+            width: 1000px;
+            height: 500px;
+            border: 5px solid black;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .img_wrap {
+            width: 4000px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+        }
+
+        .img_wrap>img {
+            width: 25%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .dot {
+            width: 160px;
+            height: 40px;
+            position: absolute;
+            top: 90%;
+            left: 425px;
+            z-index: 99;
+            line-height: 40px;
+            color: grey;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        .dot>h2:first-child {
+            color: #000;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /* 버튼을 클릭하면 클릭에 해당하는 버튼 순서에 맞춰
+            img_wrap이 이동해야 됨
+            0.버튼의 순서를 가져오기 위해 버튼 순서를 부여하기
+            1.버튼을 attr과 each를 사용하여 data-index 속성을 부여하기
+            2.클릭한 버튼이 누군지 알아오기
+            3.클릭하면 img_wrap이 -1000px만큼 이동하기
+            (wrap의 크기 : 1000 * 500px) */
+
+            $("h2").each(function(num){
+                $(this).attr({
+                    "data-num": num
+                });
+            });
+
+            $("h2").click(function(){
+
+                var i = $(this).attr("data-num");
+
+                $("h2").css({
+                    color: "gray"
+                });
+
+                $("h2").eq(i).css({
+                    color: "black",
+                });
+
+                $(".img_wrap").animate({
+                    left: -1000 * i
+                });
+
+                // $("h2").eq(i).addClass("active");
+
+                console.log(i);
+            });
+
+        }); //end
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="img_wrap">
+            <img src="img/22670.avif" alt="">
+            <img src="img/95084.avif" alt="">
+            <img src="img/prod-yourshot-1527368-11798474.avif" alt="">
+            <img src="img/prod-yourshot-430662-8.webp" alt="">
+        </div>
+        <div class="dot">
+            <h2>●</h2>
+            <h2>●</h2>
+            <h2>●</h2>
+            <h2>●</h2>
+        </div>
+    </div>
+</body>
+</html>

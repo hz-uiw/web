@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /* *이벤트
+            =>사용자가 마우스 또는 키보드로 특정행동을 했을 때
+            그에 반응하는 상호작용 */
+
+            // *마우스 이벤트
+            // 1.mousemove : 엘리먼트 내부에 마우스가 움직였을 때 실행
+            // 2.mouseenter : 엘리먼트에 마우스가 들어갔을 때 실행
+            // 3.mouseleave : 엘리먼트에 마우스가 나왔을 때 실행
+            // 4.hover : mouseenter + mouseleave (콜백함수)
+            // 5.mousedown : 엘리먼트에 마우스를 누르자마자 실행
+            // 6.mouseup : 엘리먼트에 마우스를 떼자마자 실행
+            // 7.click : mousedown + mouseup
+            // 8.dblclick : 일정 시간내에 마우스를 두 번 눌렀다가 뗏을 때 실행됨
+
+            /* $("선택자").이벤트명(function(){
+                ~~~~~
+            }); */
+
+            $(".box").css({
+                width: 300,
+                height: 300,
+                backgroundColor: "coral",
+            });
+
+            // 1.mousemove
+            /* $(".box").mousemove(function(){
+                $(".box").css({
+                    backgroundColor: "lightblue",
+                });
+            }); */
+
+            // 2.mouseenter
+            /* $(".box").mouseenter(function(){
+                $(".box").css({
+                    width: 500,
+                });
+            }); */
+
+            //3.mouseleave
+            /* $(".box").mouseleave(function(){
+                $(".box").css({
+                    height: 500,
+                });
+            }); */
+
+            // 5.mousedown
+            /* $(".box").mousedown(function(){
+                $(".box").css({
+                    backgroundColor: "teal",
+                });
+            }); */
+
+            //6.mouseup
+            /* $(".box").mouseup(function(){
+                $(".box").css({
+                    backgroundColor: "lightgray",
+                });
+            }); */
+
+            // 7.click
+            /* $(".box").click(function(){
+                $(".box").css({
+                    backgroundColor: "crimson",
+                });
+            }); */
+
+            // 8.dblclick
+            /* $(".box").dblclick(function(){
+                $(".box").css({
+                    backgroundColor: "tan",
+                });
+            }); */
+
+            // *콜백함수
+            // =>함수를 실행하고 난 뒤 실행하는 함수
+
+            // 4.hover
+            $(".box").hover(function(){
+                $(".box").css({
+                    backgroundColor: "slateblue",
+                });
+            }, function(){
+                $(".box").css({
+                    backgroundColor: "pink"
+                });
+            });
+
+
+        });//end
+    </script>
+</head>
+<body>
+
+    <div class="box"></div>
+    
+</body>
+</html>

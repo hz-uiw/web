@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콜라b 풀이</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            display: block;
+            border: 0;
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            display: block;
+            color: #262626;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .wrap {
+            width: 100%;
+        }
+
+        header {
+            width: 100%;
+            /* background-color: antiquewhite; */
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .inner {
+            width: 1500px;
+            height: 100%;
+            /* background-color: blueviolet; */
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .top_banner {
+            width: 100%;
+            height: 50px;
+            background-color: #000;
+            color: #fff;
+            line-height: 50px;
+            font-size: 14px;
+        }
+
+        .top_banner h5:first-child {
+            float: left;
+        }
+
+        .top_banner h5:nth-child(2) {
+            float: right;
+        }
+
+        .in_header {
+            height: 86px;
+            background-color: #fff;
+            border: 1px solid #000;
+            border-radius: 86px;
+            margin-top: 30px;
+            padding: 25px;
+            position: relative;
+        }
+
+        .logo {
+            width: 104px;
+            height: 100%;
+            /* background-color: lawngreen; */
+            float: left;
+        }
+
+        .logo>a {
+            width: 100%;
+            height: 100%;
+        }
+
+        nav {
+            width: 680px;
+            height: 100%;
+            /* background-color: rgb(255, 196, 120); */
+            float: right;
+            line-height: 34px;
+            font-weight: 900;
+        }
+
+        .gnb {
+            width: 428px;
+            height: 100%;
+            /* background-color: rgb(96, 244, 219); */
+            float: left;
+        }
+
+        .gnb>li {
+            float: left;
+            padding: 0 15px;
+        }
+
+        .login {
+            float: left;
+            padding: 0 15px;
+        }
+
+        .login>li {
+            float: left;
+            padding: 0 11px;
+        }
+
+        .ham {
+            width: 65px;
+            height: 65px;
+            background-color: #f9714e;
+            border-radius: 50%;
+            color: #fff;
+            text-align: center;
+            line-height: 63px;
+            font-size: 30px;
+            position: absolute;
+            top: 9.5px;
+            right: 13px;
+        }
+
+        /* header end */
+
+        .section_1 {
+            width: 100%;
+            height: 920px;
+            background-color: #f8d76e;
+            background-image: url(img/section_1_background.png);
+            background-size: 1260px;
+            background-repeat: no-repeat;
+            background-position: 740px 50px;
+            padding-top: 300px;
+        }
+
+        .section_1>.inner {
+            padding: 0 25px;
+        }
+
+        .sec_1_left {
+            float: left;
+        }
+
+        .text_img {
+            width: 742px;
+        }
+
+        .sec_1_left>h3 {
+            font-size: 30px;
+            letter-spacing: -2px;
+        }
+
+        .sec_1_left>h4 {
+            color: #ff562a;
+            font-size: 80px;
+        }
+
+        .sec_1_left>h4>span {
+            font-size: 40px;
+            font-weight: 500;
+        }
+
+        .sec_1_right {
+            width: 306px;
+            position: absolute;
+            top: -100px;
+            right: 100px;
+        }
+
+        /* section_1 end */
+
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+
+        <header>
+            <div class="top_banner">
+                <div class="inner in_top_banner">
+                    <h5>새로운 콜라보 뉴스가 필요하다면~</h5>
+                    <h5>콜라보 News</h5>
+                </div>
+            </div>
+            <div class="in_header inner">
+                <div class="logo">
+                    <a href="#"><img src="img/logo.png" alt=""></a>
+                </div>
+                <nav>
+                    <ul class="gnb">
+                        <li><a href="#">브랜드 전체보기</a></li>
+                        <li><a href="#">콜라보 NEWS</a></li>
+                        <li><a href="#">콜라보 레퍼런스</a></li>
+                    </ul>
+                    <ul class="login">
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">로그인</a></li>
+                    </ul>
+                    <div class="ham">=</div>
+                </nav>
+            </div>
+        </header>
+        <!-- header end -->
+
+        <section class="section_1">
+            <div class="inner">
+                <div class="sec_1_left">
+                    <div class="text_img">
+                        <img src="img/main_text.png" alt="">
+                    </div>
+                    <h3>국내 최대 콜라보 데이터</h3>
+                    <h4>275<span>건</span></h4>
+                </div>
+                <div class="sec_1_right">
+                    <img src="img/section_1_img.png" alt="">
+                </div>
+            </div>
+        </section>
+        <!-- section_1 end -->
+
+    </div>
+
+</body>
+</html>

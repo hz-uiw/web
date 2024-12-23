@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 500px;
+            height: 500px;
+            background-color: darkgreen;
+            margin: 200px auto;
+            transition-duration: 3s;
+        }
+
+        .box:hover {
+             transform: scale(0.5) rotateZ(360deg);
+             /* =>트랜스폼에 여러 속성값을 적용할 땐
+             띄어쓰기로 구분하여 여러 속성값 작성 가능 */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box"></div>
+
+    <!-- *문제1
+    =>엘리먼트 1개 제작
+    =>엘리먼트에 마우스를 올리면 3초동안
+    360도 회전하면서 절반으로 작게 만들기 -->
+    
+</body>
+</html>

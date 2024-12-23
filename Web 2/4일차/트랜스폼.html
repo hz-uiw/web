@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트랜스폼</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: lightskyblue;
+            margin: 300px auto;
+
+            transition-duration: 1s;
+
+            /* transform: translateX(200px); */
+            /* transform: translateY(200px); */
+            /* transform: translate(200px, 100px); */
+            /* =>포지션처럼 위치를 이동시킬 수 있으나, 블럭요소를 유지함 */
+        }
+
+        .box:hover {
+            /* transform: rotateZ(360deg); */
+            /* =>회전시킬 때 사용하며, 단위는 deg
+            =>-360 ~ +360 사용가능 */
+
+            /* transform: scale(2); */
+            /* =>엘리먼트를 확대 및 축소할 때 사용하며,
+            기준점은 중앙
+            =>단위는 따로 없으며 1배 기준으로 확대 축소할 수 있음 */
+
+            transform: skew(60deg);
+            /* =>엘리먼트를 기울일 때 사용
+            =>단위는 deg */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>트랜스폼</h2>
+    </div>
+    
+</body>
+</html>

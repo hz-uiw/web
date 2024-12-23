@@ -1,0 +1,140 @@
+.wrap {
+    width: 100%;
+}
+
+header {
+    height: 100px;
+    background-color: skyblue;
+    padding: 20px 0;
+    text-align: center;
+    line-height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99
+}
+
+.logo {
+    width: 150px;
+    background-color: crimson;
+}
+
+.gnb {
+    width: 600px;
+    background-color: pink;
+    display: flex;
+    justify-content: space-between;
+}
+
+.gnb>li {
+    width: 22%;
+    background-color: sandybrown;
+}
+
+.ham_btn {
+    display: none;
+}
+
+/* header end */
+
+.section_1 {
+    height: 90vh;
+    background-image: url(../img/20161010.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.section_1>h2 {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.section_1>p {
+    font-size: 20px;
+}
+
+/* section_1 end */
+
+.section_2 {
+    padding: 150px 0;
+    background-color: lavender;
+}
+
+.con {
+    width: 32%;
+}
+
+/* .section_2 end */
+
+footer {
+    height: 140px;
+    background-color: burlywood;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* footer end */
+
+/* 1024px media */
+@media screen and (max-width:1024px) {
+    header {
+        height: 80px;
+        padding: 20px 0;
+        line-height: 40px;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    .gnb {
+        width: 450px;
+    }
+
+    /* header end */
+
+    .section_1 {
+        height: 60vh;
+    }
+
+    /* section_1 end */
+
+    .section_2 {
+        padding: 10vw 0;
+    }
+
+    .con {
+        width: 100%;
+        margin-bottom: 2vh;
+    }
+}
+/* 1024px media */
+
+@media all and (max-width: 768px) {
+    .gnb {
+        display: none;
+    }
+
+    .ham_btn {
+        width: 40px;
+        height: 100%;
+        background-color: saddlebrown;
+        font-size: 20px;
+        font-weight: 900;
+        cursor: pointer;
+        display: block;
+    }
+
+    /* header end */
+
+    .section_1 {
+        height: 100vh;
+    }
+}

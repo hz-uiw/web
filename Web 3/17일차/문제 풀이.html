@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제 풀이</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: teal;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/jquery.transit.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var i = 0;
+            $(".box").click(function(){
+                if (i == 0) {
+                    $(this).transition({
+                        backgroundColor: "salmon",
+                        rotate: 360
+                    });
+                    i++;
+                } else if (i == 1) {
+                    $(this).transtion({
+                        backgroundColor: "teal",
+                        rotate: -360,
+                    });
+                    i = 0;
+                }
+            });
+        }); //end
+    </script>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

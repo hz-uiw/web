@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>점 슬라이드 풀이</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .wrap {
+            width: 1000px;
+            height: 500px;
+            border: 10px solid gray;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .img_wrap {
+            width: 400%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+        }
+
+        .img_wrap>img {
+            width: 25%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .btn {
+            width: 150px;
+            background-color: sandybrown;
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .btn>li {
+            width: 30px;
+            height: 30px;
+            background-color: lightslategrey;
+            border-radius: 50%;
+        }
+
+        .btn>.active {
+            background-color: crimson;
+        }
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /* 버튼을 클릭하면 클릭에 해당하는 버튼 순서에 맞춰
+            img_wrap이 이동해야 됨
+            0.버튼의 순서를 가져오기 위해 버튼 순서를 부여하기
+            1.버튼을 attr과 each를 사용하여 data-index 속성을 부여하기
+            2.클릭한 버튼이 누군지 알아오기
+            3.클릭하면 img_wrap이 -1000px만큼 이동하기
+            (wrap의 크기 : 1000 * 500px) */
+
+            $(".btn>li").each(function(num){
+                $(this).attr({
+                    "data-index": num
+                });
+            }).click(function(){
+                var i = $(this).attr("data-index");
+                
+                $(".img_wrap").animate({
+                    left: -1000 * i
+                });
+
+                $(".btn>li").removeClass("active");
+                $(".btn>li").eq(i).addClass("active");
+
+                console.log(i);
+            });
+
+        }); //end
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="img_wrap">
+            <img src="img/a.avif" alt="">
+            <img src="img/b.avif" alt="">
+            <img src="img/c.avif" alt="">
+            <img src="img/d.webp" alt="">
+        </div>
+
+        <ul class="btn">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>

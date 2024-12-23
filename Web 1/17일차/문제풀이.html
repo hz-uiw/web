@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제풀이</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        img {
+            display: block;
+            border: 0;
+        }
+
+        .wrap {
+            width: 400px;
+            border: 5px solid gray;
+            margin: 100px auto;
+        }
+
+        .wrap:hover img {
+            width: 105%;
+            height: 105%;
+        }
+
+        .wrap:hover h3 {
+            text-decoration: underline;
+        }
+
+        .img_wrap {
+            width: 100%;
+            height: 450px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .img_wrap>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .live {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: rgba(0, 0, 0, .4);
+            padding: 5px 10px 5px 0;
+            color: #fff;
+            border-radius: 50px;
+        }
+
+        .live>span:first-child {
+            padding: 5px 10px;
+            border-radius: 50px;
+            background-color: #f4351e;
+        }
+
+        .text_wrap {
+            padding: 15px 0;
+        }
+
+        .text_wrap>h3 {
+            margin-bottom: 4px;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="img_wrap">
+            <img src="img/a.jpg" alt="">
+            <h5 class="live">
+                <span>LIVE</span>
+                <span>6,187 시청</span>
+            </h5>
+        </div>
+        <div class="text_wrap">
+            <h3>겨울은 겨울은 겨울은 겨울은 겨울은</h3>
+            <p>매우춥다. 매우춥다. 매우춥다. 매우춥다. 매우춥다. </p>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일시트</title>
+
+    <style>
+        
+    /* *css
+    =>html구조에 스타일을 적용싴디자인 작업을 함
+    =>css는 head태그 안쪽에 style태그를 열어서 작성해야됨
+    =>스타일 값을 입력후 반드시 ;(세미콜론)을 적어서 마무리 해줘야됨 */
+
+
+    /* *스타일 적용하는 순서
+    1.html 태그 작성
+    2.head -> style태그 작성
+    3.적용하고자 하는태그 선택
+    4.속성과 속성값을 넣어 스타일 적용 */
+
+
+  /*   *css 선택자
+    1.태그 선택자
+    =>태그를 선택한걸 태그 선택자 라고 하며,
+    선택된 모든 태그가 스타일이 적용됨 */
+
+    h2{
+        color: hotpink;
+    }
+
+    h3{
+        color: yellowgreen;
+    }
+
+
+    /* 2.클래스 선택자
+    =>태그의 속성으로 class="선택자명"으로 작성
+    =>아이디 선택자처럼 이름을 커스텀하여 작성할 수 있음
+    =>같은 클래스명 끼리는 똑같은 스타일 적용 가능
+    =>style에서 선택할 때 .을 적어줄것 */
+
+
+    .yellow{
+        color: yellow;
+    }
+
+
+    /* 3.아이디 선택자
+    =>이름을 커스텀하여 선택자를 만들 수 있음
+    =>태그의 속성으로 id="선택자명" 작성
+    =>선택자명은 다른 선택자 명과 중복해서 사용 불가
+    =>style에서 선택할 때 #을 적어줄것 */
+
+
+    #blue{
+        color: blue;
+    }
+
+
+
+    /* *아이디, 클래스 선택자명 규칙
+    1.첫번째 글자는 영어로 시작
+    2.빈 공백(띄어쓰기) 사용 x
+    3.특수\문자 _(언더바), -(하이픈)만 사용가능 */
+
+
+
+
+
+    </style>
+
+</head>
+<body>
+
+<h2>스타일시트</h2>
+<h2 class="yellow">태그선택자</h2>
+<h3>태그선택자</h3>
+<h3 class="yellow">태그선택자</h3>
+<h3 class="yellow">클래스선택자</h3>
+<h3 class="yellow" id="blue">아이디선택자</h3>
+
+
+</body>
+</html>

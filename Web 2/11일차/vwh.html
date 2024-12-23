@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vw vh 단위</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            display: block;
+            border: 0;
+        }
+
+        /* *css 단위
+        1. px, %
+        =>css에서는 지정한 단위에 따라 브라우저에 의해 픽셀값으로 변환된다
+        =>px의 경우 브라우저에서 절대값으로 인식하여 1px은 항상 1px로 나타낸다
+        =>%는 고정값이 아닌 상대적인 값이다.
+        유동적으로 변하는 값이기 때문에 반응형 웹디자인에서 건의 px단위가 아닌 %단위를 사용한다 */
+
+        /* 2. vw, vh */
+        /* 1)vw
+        =>viewport widht의 약자이며, 절대값을 가지지않는 가변단위
+        =>width와 관련된 단위이며 화면 너비에 영향을 받는다
+        =>모니터 해상도 마다 표현되는게 다르며
+        브라우저 크기가 줄더라도 퍼센트처럼 비율대로 줄어듦 */
+
+        /* 2)vh
+        =>viewport height의 약자이며, 절대값을 가지지않는 가변 단위이다
+        =>height와 관련된 단위이면 화면의 높이에 영향을 받는다
+        =>높이값을 퍼센트로 표현할 수 없을 때 사용할 수 있음
+        (화면을 각 기기별 화면에 가득 채울때만 사용, 반응형에 사용하지 않음)
+        =>브라우저 가로 크기를 줄여도 비율대로 줄진 않지만
+        세로를 줄이게 되면 브라우저 기준에 맞춰서 비율대로 줄어듦 */
+
+        .box {
+            width: 100%;
+            height: 100vh;
+            background-color: tan;
+            margin: 0 auto;
+            display: none;
+        }
+
+        .container {
+            width: 70vw;
+            height: 20vw;
+            background-color: lightblue;
+            margin: 5.5vw auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .con {
+            width: 32%;
+            height: 100%;
+            background-color: thistle;
+            /* font-size: 3.7vw;
+            text-align: center;
+            line-height: 20vw; */
+        }
+
+        .con:nth-child(1)>img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* =>이미지 태그의 크기를 부모 크기에 맞춰줄 때 사용
+            (배경 이미지 넣었을때와 유사하게 표현) */
+        }
+
+        .con:nth-child(2)>img {
+            width: 100%;
+            /* =>이미지의 세로 크기에 이미지 부모들의 크기값을 맞춰줌
+            (이미지의 부모들의 세로 크기값이 없어야함) */
+        }
+
+        .con:nth-child(3) {
+            background-image: url(img/images.jfif);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        /* @media all and (max-width: 1500px) {
+            .container {
+                width: 1000px;
+            }
+        } */
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="container">
+        <div class="con">
+            <img src="img/images.jfif" alt="">
+        </div>
+        <div class="con">
+            <img src="img/images.jfif" alt="">
+        </div>
+        <div class="con"></div>
+    </div>
+</body>
+</html>

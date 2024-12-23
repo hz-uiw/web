@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $(".box").css({
+                width: 300,
+                height: 300,
+                backgroundColor: "olive",
+                // transitionDuration: ".5s",
+            });
+
+            var box_w = $(".box").width();
+
+            $(".box").click(function(){
+                $(".box").css({
+                    width: box_w += 100,
+                    transitionDuration: ".5s",
+                });
+            });
+            
+
+            /* *문제
+            =>원하는 크기의 엘리먼트를 생성 후
+            엘리먼트를 클릭할 때마다 가로의 크기가 100px씩
+            증가되게 만들기
+            변수활용
+            복합대입연산자 활용 */
+        });
+    </script>
+</head>
+<body>
+
+    <div class="box"></div>
+    
+</body>
+</html>
